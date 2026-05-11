@@ -1,0 +1,172 @@
+[
+  {
+    "id": "kathmandu-sunrise-hostel",
+    "title": "Sunrise Student Hostel",
+    "price": 9000,
+    "location": "Kathmandu",
+    "propertyType": "Hostel",
+    "description": "Affordable shared hostel near major colleges with Wi-Fi, study hall, and rooftop laundry.",
+    "fullDescription": "Sunrise Student Hostel is designed for students who need a safe, budget-friendly stay close to educational hubs in Kathmandu. The property includes a study hall, hot water, reliable Wi-Fi, CCTV, and a clean rooftop laundry area.",
+    "whatsappNumber": "9779812345601",
+    "featured": true,
+    "images": [
+      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "amenities": ["Wi-Fi", "Hot Water", "CCTV", "Laundry", "Study Room"]
+  },
+  {
+    "id": "pokhara-lakeside-flat",
+    "title": "Lakeside Studio Flat",
+    "price": 18000,
+    "location": "Pokhara",
+    "propertyType": "Flat",
+    "description": "Modern studio flat near Lakeside with balcony views and furnished interiors.",
+    "fullDescription": "This studio flat in Pokhara Lakeside offers a minimal modern layout perfect for students, digital nomads, or couples. It includes a furnished bedroom area, attached kitchen, private balcony, and easy access to cafés, bus stops, and grocery stores.",
+    "whatsappNumber": "9779812345602",
+    "featured": true,
+    "images": [
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "amenities": ["Furnished", "Balcony", "Wi-Fi", "Attached Kitchen"]
+  },
+  {
+    "id": "biratnagar-family-house",
+    "title": "Peaceful Family House",
+    "price": 42000,
+    "location": "Biratnagar",
+    "propertyType": "House",
+    "description": "Spacious 2.5-storey home in a quiet residential area with parking and garden space.",
+    "fullDescription": "A comfortable family house in Biratnagar offering multiple bedrooms, a large living area, parking, and a private garden. The neighborhood is family-friendly and close to schools, clinics, and local markets.",
+    "whatsappNumber": "9779812345603",
+    "featured": false,
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "amenities": ["Parking", "Garden", "Water Tank", "Solar Water"]
+  },
+  {
+    "id": "lalitpur-city-hostel",
+    "title": "CityNest Girls Hostel",
+    "price": 11000,
+    "location": "Lalitpur",
+    "propertyType": "Hostel",
+    "description": "Secure girls hostel with biometric access, meals, and easy commute to Pulchowk campus.",
+    "fullDescription": "CityNest Girls Hostel in Lalitpur provides a secure and supportive living environment for students. It offers biometric entry, meal service, housekeeping, and quick commute access to Pulchowk, Jawalakhel, and Kumaripati.",
+    "whatsappNumber": "9779812345604",
+    "featured": true,
+    "images": [
+      "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1486304873000-235643847519?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "amenities": ["Meals", "Housekeeping", "Biometric Access", "Wi-Fi"]
+  },
+  {
+    "id": "bhaktapur-traditional-flat",
+    "title": "Heritage Courtyard Flat",
+    "price": 22000,
+    "location": "Bhaktapur",
+    "propertyType": "Flat",
+    "description": "Sunny one-bedroom flat with traditional brick exterior and modern interiors.",
+    "fullDescription": "Located in the cultural heart of Bhaktapur, this one-bedroom flat blends heritage surroundings with comfortable modern living. It is ideal for professionals or small families wanting a peaceful neighborhood and quick market access.",
+    "whatsappNumber": "9779812345605",
+    "featured": false,
+    "images": [
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "amenities": ["Sunny Rooms", "Water Supply", "Nearby Market"]
+  },
+  {
+    "id": "kathmandu-budget-flat",
+    "title": "Budget Bachelor Flat",
+    "price": 15000,
+    "location": "Kathmandu",
+    "propertyType": "Flat",
+    "description": "Compact bachelor flat with private kitchen, close to public transport and supermarkets.",
+    "fullDescription": "This bachelor flat is a practical option for students and young professionals in Kathmandu. It offers a private kitchen, attached bathroom, filtered water access, and a convenient location near public transport routes.",
+    "whatsappNumber": "9779812345606",
+    "featured": false,
+    "images": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1502672023488-70e25813eb80?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "amenities": ["Private Kitchen", "Attached Bathroom", "Water Filter"]
+  },
+  {
+    "id": "pokhara-terrace-house",
+    "title": "Terrace View House",
+    "price": 50000,
+    "location": "Pokhara",
+    "propertyType": "House",
+    "description": "Stylish family house with mountain-view terrace and covered parking.",
+    "fullDescription": "A premium house in Pokhara featuring airy bedrooms, a terrace with mountain views, covered parking, and a modern kitchen. Ideal for families wanting a long-term stay with extra comfort and room to grow.",
+    "whatsappNumber": "9779812345607",
+    "featured": true,
+    "images": [
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1576941089067-2de3c901e126?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "amenities": ["Terrace", "Parking", "Modern Kitchen", "Backup Water"]
+  },
+  {
+    "id": "lalitpur-student-flat",
+    "title": "Pulchowk Student Flat",
+    "price": 20000,
+    "location": "Lalitpur",
+    "propertyType": "Flat",
+    "description": "Two-room flat within walking distance of colleges, cafés, and bus stops.",
+    "fullDescription": "This student-friendly flat in Lalitpur is set up for comfortable shared living with two rooms, strong Wi-Fi, bright interiors, and convenient access to educational and commercial centers.",
+    "whatsappNumber": "9779812345608",
+    "featured": false,
+    "images": [
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "amenities": ["Wi-Fi", "Bright Rooms", "Walking Distance", "Shared Balcony"]
+  },
+  {
+    "id": "bhaktapur-hostel-hub",
+    "title": "Scholar Stay Hostel",
+    "price": 8500,
+    "location": "Bhaktapur",
+    "propertyType": "Hostel",
+    "description": "Affordable hostel with meals, reading corner, and secure entry for students.",
+    "fullDescription": "Scholar Stay Hostel is ideal for students looking for low-cost accommodation in Bhaktapur. Residents enjoy simple meals, quiet reading zones, clean washrooms, and a supportive hostel management team.",
+    "whatsappNumber": "9779812345609",
+    "featured": false,
+    "images": [
+      "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1486304873000-235643847519?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "amenities": ["Meals", "Reading Corner", "Secure Entry", "Laundry"]
+  },
+  {
+    "id": "biratnagar-modern-house",
+    "title": "Modern Duplex House",
+    "price": 47000,
+    "location": "Biratnagar",
+    "propertyType": "House",
+    "description": "Well-finished duplex house with four bedrooms, parking, and peaceful surroundings.",
+    "fullDescription": "This modern duplex in Biratnagar offers spacious family living with four bedrooms, a stylish living room, parking, and reliable water storage. It suits mid-size families seeking a practical long-term rental.",
+    "whatsappNumber": "9779812345610",
+    "featured": true,
+    "images": [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "amenities": ["4 Bedrooms", "Parking", "Water Tank", "Quiet Area"]
+  }
+]
