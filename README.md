@@ -37,8 +37,8 @@ The app starts locally with no backend and no database required.
 
 Use these temporary credentials:
 
-- Username: `admin`
-- Password: `admin123`
+- Username: `*******`
+- Password: `########`
 
 ## Data Behavior
 

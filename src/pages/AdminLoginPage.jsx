@@ -66,8 +66,8 @@ function AdminLoginPage() {
         </form>
 
         {/* <div className="mt-6 rounded-2xl bg-slate-100 p-4 text-sm text-slate-600 dark:bg-slate-900 dark:text-slate-300">
-          <p><span className="font-semibold">Username:</span> admin</p>
-          <p className="mt-1"><span className="font-semibold">Password:</span> admin123</p>
+          <p><span className="font-semibold">Username:</span> *****</p>
+          <p className="mt-1"><span className="font-semibold">Password:</span> *******</p>
         </div> */}
       </div>
     </section>
