@@ -70,7 +70,7 @@ export function AppProvider({ children }) {
   }
 
   const login = (username, password) => {
-    const success = username === 'admin' && password === 'admin123'
+    const success = username === 'admin' && password === 'Gharkhoj@2748'
     setIsAuthenticated(success)
 
     if (success) {
