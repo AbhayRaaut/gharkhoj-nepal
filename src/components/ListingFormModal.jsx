@@ -42,10 +42,13 @@ function ListingFormModal({ isOpen, onClose, onSubmit, editingListing }) {
     setFormState((current) => ({ ...current, [key]: value }))
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    onSubmit(formState)
-    onClose()
+    const success = await onSubmit(formState)
+
+    if (success) {
+      onClose()
+    }
   }
 
   return (

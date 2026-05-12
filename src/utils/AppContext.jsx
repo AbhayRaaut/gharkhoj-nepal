@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import seedListings from '../data/listings.json'
 import { normalizeListing } from './helpers'
+import { fetchListingsFromFile, saveListingsToFile } from './listingsApi'
 import { readSession, readStorage, STORAGE_KEYS, writeSession, writeStorage } from './storage'
 
 const AppContext = createContext(null)
@@ -11,6 +12,19 @@ export function AppProvider({ children }) {
   const [favorites, setFavorites] = useState(() => readStorage(STORAGE_KEYS.favorites, []))
   const [isAuthenticated, setIsAuthenticated] = useState(() => readSession(STORAGE_KEYS.auth, false))
   const [toast, setToast] = useState(null)
+
+  useEffect(() => {
+    const loadListings = async () => {
+      try {
+        const fileListings = await fetchListingsFromFile()
+        setListings(fileListings)
+      } catch {
+        setListings(readStorage(STORAGE_KEYS.listings, seedListings))
+      }
+    }
+
+    loadListings()
+  }, [])
 
   useEffect(() => {
     writeStorage(STORAGE_KEYS.listings, listings)
@@ -40,33 +54,46 @@ export function AppProvider({ children }) {
 
   const notify = (message, type = 'success') => setToast({ message, type })
 
-  const addListing = (listing) => {
-    setListings((current) => [normalizeListing(listing), ...current])
-    notify('Listing added successfully.')
+  const persistListings = async (nextListings, successMessage, successType = 'success') => {
+    try {
+      await saveListingsToFile(nextListings)
+      setListings(nextListings)
+      notify(successMessage, successType)
+      return true
+    } catch {
+      setListings(nextListings)
+      notify('Saved locally, but failed to update listings.json. Make sure you are running the Vite dev server.', 'error')
+      return false
+    }
   }
 
-  const updateListing = (listingId, nextListing) => {
-    setListings((current) =>
-      current.map((item) => (item.id === listingId ? normalizeListing({ ...item, ...nextListing, id: listingId }) : item)),
+  const addListing = async (listing) => {
+    const normalizedListing = normalizeListing(listing)
+    const nextListings = [normalizedListing, ...listings]
+    return persistListings(nextListings, 'Listing added successfully.')
+  }
+
+  const updateListing = async (listingId, nextListing) => {
+    const nextListings = listings.map((item) =>
+      item.id === listingId ? normalizeListing({ ...item, ...nextListing, id: listingId }) : item,
     )
-    notify('Listing updated successfully.')
+    return persistListings(nextListings, 'Listing updated successfully.')
   }
 
-  const deleteListing = (listingId) => {
-    setListings((current) => current.filter((item) => item.id !== listingId))
-    notify('Listing deleted successfully.', 'info')
+  const deleteListing = async (listingId) => {
+    const nextListings = listings.filter((item) => item.id !== listingId)
+    return persistListings(nextListings, 'Listing deleted successfully.', 'info')
   }
 
-  const toggleFeatured = (listingId) => {
-    setListings((current) =>
-      current.map((item) => (item.id === listingId ? { ...item, featured: !item.featured } : item)),
+  const toggleFeatured = async (listingId) => {
+    const nextListings = listings.map((item) =>
+      item.id === listingId ? { ...item, featured: !item.featured } : item,
     )
-    notify('Featured status updated.', 'info')
+    return persistListings(nextListings, 'Featured status updated.', 'info')
   }
 
-  const resetListings = () => {
-    setListings(seedListings)
-    notify('Listings reset to local seed data.', 'info')
+  const resetListings = async () => {
+    return persistListings(seedListings, 'Listings reset to local seed data.', 'info')
   }
 
   const login = (username, password) => {

@@ -31,7 +31,7 @@ npm install
 npm run dev
 ```
 
-The app starts locally with no backend and no database required.
+The app starts locally with no separate backend and no database required.
 
 ## Admin Login
 
@@ -43,9 +43,10 @@ Use these temporary credentials:
 ## Data Behavior
 
 - Seed listings live in `src/data/listings.json`
-- Runtime CRUD changes are stored in `localStorage`
+- While running `npm run dev`, admin CRUD changes are written back to `src/data/listings.json` through the local Vite dev API
+- `localStorage` is still used as a browser-side fallback cache if the dev API is unavailable
 - Admin session state is stored in `sessionStorage`
-- Resetting seed data from the dashboard restores the original JSON-based listings locally
+- Resetting seed data from the dashboard rewrites `src/data/listings.json` to the original seed data while the dev server is running
 
 ## Project Structure
 
@@ -61,4 +62,5 @@ src/
 ## Notes
 
 - WhatsApp buttons open direct owner contact links using the Nepal country code format.
-- This project is frontend-only and designed to be easy to extend into a real backend later.
+- File writing works during local development through Vite's Node runtime.
+- A static deployed build will not be able to rewrite source JSON files without a real backend.

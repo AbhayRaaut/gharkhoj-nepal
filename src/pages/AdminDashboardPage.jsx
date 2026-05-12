@@ -26,13 +26,18 @@ function AdminDashboardPage() {
     [listings],
   )
 
-  const handleCreate = (payload) => {
-    addListing(payload)
+  const handleCreate = async (payload) => {
+    return addListing(payload)
   }
 
-  const handleUpdate = (payload) => {
-    updateListing(editingListing.id, payload)
-    setEditingListing(null)
+  const handleUpdate = async (payload) => {
+    const success = await updateListing(editingListing.id, payload)
+
+    if (success) {
+      setEditingListing(null)
+    }
+
+    return success
   }
 
   return (
