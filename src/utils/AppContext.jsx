@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
-import seedListings from '../data/listings.json'
+import seedListings from '../data/defaultListings.json'
 import { normalizeListing } from './helpers'
 import { fetchListingsFromFile, saveListingsToFile } from './listingsApi'
 import { readSession, readStorage, STORAGE_KEYS, writeSession, writeStorage } from './storage'
@@ -60,9 +60,12 @@ export function AppProvider({ children }) {
       setListings(nextListings)
       notify(successMessage, successType)
       return true
-    } catch {
+    } catch (error) {
       setListings(nextListings)
-      notify('Saved locally, but failed to update listings.json. Make sure you are running the Vite dev server.', 'error')
+      notify(
+        `Saved locally, but failed to update listings.json. ${error instanceof Error ? error.message : ''}`.trim(),
+        'error',
+      )
       return false
     }
   }

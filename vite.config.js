@@ -14,6 +14,7 @@ function listingsFileApiPlugin() {
     configureServer(server) {
       server.middlewares.use('/api/listings', async (req, res) => {
         res.setHeader('Content-Type', 'application/json')
+        res.setHeader('Cache-Control', 'no-store')
 
         if (req.method === 'GET') {
           try {
@@ -22,7 +23,7 @@ function listingsFileApiPlugin() {
             res.end(content)
           } catch (error) {
             res.statusCode = 500
-            res.end(JSON.stringify({ message: 'Unable to read listings file.' }))
+            res.end(JSON.stringify({ message: error instanceof Error ? error.message : 'Unable to read listings file.' }))
           }
 
           return
@@ -44,12 +45,13 @@ function listingsFileApiPlugin() {
               return
             }
 
+            await fs.mkdir(path.dirname(listingsFilePath), { recursive: true })
             await fs.writeFile(listingsFilePath, `${JSON.stringify(parsedBody, null, 2)}\n`, 'utf8')
             res.statusCode = 200
             res.end(JSON.stringify({ success: true }))
           } catch (error) {
             res.statusCode = 500
-            res.end(JSON.stringify({ message: 'Unable to write listings file.' }))
+            res.end(JSON.stringify({ message: error instanceof Error ? error.message : 'Unable to write listings file.' }))
           }
 
           return
